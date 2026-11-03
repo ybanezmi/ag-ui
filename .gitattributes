@@ -50,3 +50,7 @@ docs/** !filter !diff !merge
 apps/dojo/public/** !filter !diff !merge
 apps/dojo/src/** !filter !diff !merge
 sdks/community/kotlin/** !filter !diff !merge
+
+# Fork-only: SwiftPM checks out this branch with the consumer's git, which may
+# lack Git LFS. The Swift SDK uses no LFS assets, so keep pointers as plain files.
+* !filter !diff !merge

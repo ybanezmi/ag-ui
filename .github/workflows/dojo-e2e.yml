@@ -475,14 +475,14 @@ jobs:
       # wanted), so this pin is what keeps the interpreter and resolver stable
       # across e2e runs.
       - name: Install uv
-        uses: astral-sh/setup-uv@1c37ad07a6a961277cf70c0d37d6f313000f5884  # v10.3.0
+        uses: astral-sh/setup-uv@68559e99cc807c1eb7e9238fd43a15bba460eec2  # v10.3.3
         with:
           version: ${{ env.UV_VERSION }}
           python-version: ${{ env.PYTHON_VERSION }}
 
       - name: Set up .NET SDK
         if: ${{ contains(join(matrix.services, ','), 'microsoft-agent-framework-dotnet') || contains(join(matrix.services, ','), 'ag-ui-dotnet') || contains(join(matrix.services, ','), 'claude-managed-agents-dotnet') }}
-        uses: actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68  # v6.0.0
+        uses: actions/setup-dotnet@0f4a354dd5547a28c70b7853dbd95d5b67886e73  # v6.1.0
         with:
           dotnet-version: |
             9.0.x
